@@ -5,6 +5,8 @@
  */
 package trabalhocpd;
 
+import static java.lang.Double.parseDouble;
+
 /**
  *
  * @author Mauricio
@@ -67,7 +69,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         dateTextField.setToolTipText("Data da transação(o ano deve ser escrito por completo).");
 
-        moneyTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.##"))));
+        moneyTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.00"))));
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -156,6 +158,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
     private void inserirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserirButtonActionPerformed
         System.out.println(moneyTextField.getText());
+        //double teste = parseDouble(moneyTextField.getText());
+        //System.out.println(teste);
     }//GEN-LAST:event_inserirButtonActionPerformed
 
     /**

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package trabalhocpd;
-
+import java.util.Calendar;
 /**
  *
  * @author Mauricio
@@ -19,88 +19,37 @@ public class Evento {
     para algo do tipo arquivo.
     */
     private String info;
-    private String data;
     private String valor;
-    private char tipo;
-    private String hora;
+    private boolean tipo;
+    
+    private int anoRegistro;//ano da inserção
+    private byte mesRegistro;//mes da inserção
+    private byte diaRegistro;//dia da inserção
+    private byte horaRegistro;//hora da inserção
+    private byte minutoRegistro;//minutos da inserção
+    
+    private int anoVencimento;//ano do vencimento
+    private byte mesVencimento;//mes do vencimento
+    private byte diaVencimento;//dia do vencimento
+
     
     //construtor da classe, o mais trivial possivel HUE
-    Evento(String info, String data, String valor, char tipo, String hora){
+    Evento(String info, String valor, boolean tipo){
         this.info = info;
-        this.data = data;
         this.valor = valor;
         this.tipo = tipo;
-        this.hora = hora;
+        
+    this.anoRegistro = Calendar.getInstance().get(Calendar.YEAR);
+    this.mesRegistro = (byte)Calendar.getInstance().get(Calendar.MONTH);
+    this.diaRegistro = (byte)Calendar.getInstance().get(Calendar.DATE);
+    this.horaRegistro = (byte)Calendar.getInstance().get(Calendar.HOUR);
+    this.minutoRegistro = (byte)Calendar.getInstance().get(Calendar.MINUTE);
+    
+    //this.anoVencimento =;
+    //this.mesVencimento =;
+    //this.diaVencimento =;
+                                                                
     } 
 
-    /**
-     * @return the info
-     */
-    public String getInfo() {
-        return info;
-    }
-
-    /**
-     * @return the data
-     */
-    public String getData() {
-        return data;
-    }
-
-    /**
-     * @return the valor
-     */
-    public String getValor() {
-        return valor;
-    }
-
-    /**
-     * @return the tipo
-     */
-    public char getTipo() {
-        return tipo;
-    }
-
-    /**
-     * @return the hora
-     */
-    public String getHora() {
-        return hora;
-    }
-
-    /**
-     * @param info the info to set
-     */
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    /**
-     * @param data the data to set
-     */
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    /**
-     * @param valor the valor to set
-     */
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
-
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(char tipo) {
-        this.tipo = tipo;
-    }
-
-    /**
-     * @param hora the hora to set
-     */
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
-
+  
 }
