@@ -157,9 +157,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inserirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserirButtonActionPerformed
-        System.out.println(moneyTextField.getText());
-        //double teste = parseDouble(moneyTextField.getText());
-        //System.out.println(teste);
+        System.out.println("texto " + moneyTextField.getText());
+        double teste = parseDouble(moneyTextField.getText());
+        System.out.println("double " + teste);
     }//GEN-LAST:event_inserirButtonActionPerformed
 
     /**

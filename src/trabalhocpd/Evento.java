@@ -34,21 +34,22 @@ public class Evento {
 
     
     //construtor da classe, o mais trivial possivel HUE
-    Evento(String info, String valor, boolean tipo){
+    Evento(String info, String valor, boolean tipo, int ano, byte mes, byte dia){
         this.info = info;
         this.valor = valor;
         this.tipo = tipo;
         
+    //registra a data e horario da validação(inseridos pelo sistema)
     this.anoRegistro = Calendar.getInstance().get(Calendar.YEAR);
     this.mesRegistro = (byte)Calendar.getInstance().get(Calendar.MONTH);
     this.diaRegistro = (byte)Calendar.getInstance().get(Calendar.DATE);
     this.horaRegistro = (byte)Calendar.getInstance().get(Calendar.HOUR);
     this.minutoRegistro = (byte)Calendar.getInstance().get(Calendar.MINUTE);
     
-    //this.anoVencimento =;
-    //this.mesVencimento =;
-    //this.diaVencimento =;
-                                                                
+    //data que o usuario inseriu
+    this.anoVencimento = ano;
+    this.mesVencimento = mes;
+    this.diaVencimento = dia;                                              
     } 
 
   
